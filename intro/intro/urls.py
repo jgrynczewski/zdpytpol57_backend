@@ -29,5 +29,6 @@ urlpatterns = [
     path('ewa/', ewa),
     path('welcome/<str:name>/', welcome),
 
-    path('next/', include('next.urls'))
+    path('next/', include('next.urls')),
+    path('hello/', include('hello_app.urls')),
 ]
