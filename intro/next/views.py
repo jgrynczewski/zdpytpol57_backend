@@ -8,3 +8,11 @@ def hello(request):
 
 def hello2(request):
     return render(request, 'next/hello.html')
+
+
+def name_view(request, name):
+    return render(
+        request,
+        'next/adam.html',
+        context={'name': name}
+    )
