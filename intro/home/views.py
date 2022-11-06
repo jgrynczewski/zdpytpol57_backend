@@ -1,3 +1,5 @@
+from markupsafe import escape
+
 from django.shortcuts import render
 from django.shortcuts import HttpResponse
 
@@ -16,7 +18,9 @@ def ewa(request):
 
 
 def welcome(request, name):
+    escaped_name = escape(name)
+
     if name == 'john':
         return HttpResponse("Sorry, nie lubimy Johnych")
     else:
-        return HttpResponse(f"Powitać, {name}!")
+        return HttpResponse(f"Powitać, {escaped_name}!")
