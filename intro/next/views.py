@@ -13,6 +13,6 @@ def hello2(request):
 def name_view(request, name):
     return render(
         request,
-        'next/adam.html',
+        'next/name.html',
         context={'name': name}
     )
