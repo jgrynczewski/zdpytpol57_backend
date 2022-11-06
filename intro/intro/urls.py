@@ -18,7 +18,7 @@ from django.urls import path
 
 from intro.views import hello, welcome
 from home.views import hi, adam, ewa, welcome
-
+from next.views import hello_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,4 +28,5 @@ urlpatterns = [
     path('adam/', adam),
     path('ewa/', ewa),
     path('welcome/<str:name>/', welcome),
+    path('hello2/', hello_view),
 ]
