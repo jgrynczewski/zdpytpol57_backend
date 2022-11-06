@@ -1,3 +1,5 @@
+import datetime
+
 from django.shortcuts import render
 from django.shortcuts import HttpResponse
 
@@ -15,4 +17,17 @@ def name_view(request, name):
         request,
         'next/name.html',
         context={'name': name}
+    )
+
+
+def is_it_new_year(request):
+    is_new_year = False
+    today = datetime.date.today()
+    if today.day == 6 and today.month == 11:
+        is_new_year = True
+
+    return render(
+        request,
+        'next/new_year.html',
+        context={'is_new_year': is_new_year}
     )
