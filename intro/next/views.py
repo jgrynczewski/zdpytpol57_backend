@@ -2,5 +2,9 @@ from django.shortcuts import render
 from django.shortcuts import HttpResponse
 
 
-def hello_view(request):
-    return HttpResponse("Hello, world!")
+def hello(request):
+    return HttpResponse("<!DOCTYPE html><html><body>Hello, world!</body></html>")
+
+
+def hello2(request):
+    return render(request, 'next/hello.html')
