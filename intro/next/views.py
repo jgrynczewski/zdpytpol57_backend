@@ -31,3 +31,25 @@ def is_it_new_year(request):
         'next/new_year.html',
         context={'is_new_year': is_new_year}
     )
+
+
+def fruits(request):
+    all_fruits = [
+        'jabłko',
+        'banan',
+        'gruszka',
+        'winogrona'
+    ]
+
+    return render(
+        request,
+        'next/fruits.html',
+        context={
+            'fruits': all_fruits,
+            'passenger': {
+                'name': "ala",
+                'age': 12
+            },
+            'animal': 'cow,chicken'
+        }
+    )

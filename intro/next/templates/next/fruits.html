@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ol>
+        {# komentarz jednolinikowy dtl #}
+        {% comment %}
+            to jest komentarz
+            wielolinijkowy
+        {% endcomment %}
+    {% for fruit in fruits %}
+        <li>{{ fruit }}</li>
+    {% endfor %}
+
+        <p>{{ fruits.1 }}</p> {# do indeksu odwołujemy się za pomocą notacji z kropką #}
+        <p>{{ passenger.name }}</p> {# do klucza też odwołujemy się za pomocą natacji z kropką #}
+
+        <p>{{ fruits | length }}</p> {# przykład filtra zastępującego funkcję (len) #}
+        <p>{{ fruits | join:", " }}</p> {# przykład filtra zastępującego metodę (join) #}
+        <p>{{ 2 | add:3 }}</p>  {# przykład filtra zastępującego operator (+) #}
+
+        {% for item in fruits %}
+            <p>{{ forloop.counter }} {{item}}</p>
+        {% endfor %}
+    </ol>
+</body>
+</html>
