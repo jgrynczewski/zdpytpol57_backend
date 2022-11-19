@@ -1,0 +1,8 @@
+{% extends "inheritance/layout.html" %}
+
+{% block name %}Pierwsza strona{% endblock %}
+
+{% block body %}
+<p>To jest pierwsza strona</p>
+Przejdź do strony <a href="{% url 'links:second' %}">numer 2</a>
+{% endblock %}

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'next.apps.NextConfig',
     'hello_app.apps.HelloAppConfig',
     'links.apps.LinksConfig',
+    'inheritance.apps.InheritanceConfig',
 ]
 
 MIDDLEWARE = [

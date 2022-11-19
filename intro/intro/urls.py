@@ -32,4 +32,5 @@ urlpatterns = [
     path('next/', include('next.urls')),
     path('hello/', include('hello_app.urls')),
     path('links/', include('links.urls')),
+    path('inheritance/', include('inheritance.urls')),
 ]
