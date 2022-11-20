@@ -8,8 +8,6 @@ def create_task(request):
         if task:
             with open('tasks.txt', 'a+') as f:
                 f.write(f"{task}\n")
-        with open('tasks.txt', 'r') as f:
-            tasks = f.readlines()
 
         return redirect('form_app3:create_task')
 
