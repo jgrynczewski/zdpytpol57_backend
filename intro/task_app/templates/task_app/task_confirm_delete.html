@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>Usuwanie zadania o numerze {{ task.id }}</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <p>Czy na pewno chcesz usunąć zadanie {{ task.name }}</p>
+        <input type="submit" value="Potwierdź">
+    </form>
+    <a href="{% url 'task_app:task_list' %}"><button>Anuluj</button></a>
+</body>
+</html>
