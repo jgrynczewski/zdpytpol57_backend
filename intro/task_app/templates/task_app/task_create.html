@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "task_app/layout.html" %}
+
+{% block body %}
     <form method="POST">
         {% csrf_token %}
         <input type="text" name="title" placeholder="Tytuł zadania" required>
-        <input type="submit" value="Zapisz zadanie">
+        <input type="submit" class="btn btn-primary" value="Zapisz zadanie">
     </form>
-</body>
-</html>
+
+    <a href="{% url 'task_app:task_list' %}"><button class="btn btn-info" style="margin-top:5px;">Lista zadań</button></a>
+{% endblock %}

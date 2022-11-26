@@ -1,15 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "task_app/layout.html" %}
+
+{% block title %}
+Lista zadań
+{% endblock %}
+
+{% block body %}
     <h2>Lista zadań:</h2>
+    <a href="{% url 'task_app:task_create' %}"><button class="btn btn-primary" style="padding:5px;">Dodaj zadanie</button></a>
     <ul>
         {% for task in tasks %}
-            <li>{{ task.name }}</li>
+            <li style="margin:1%;">
+                <a href="{% url 'task_app:task_detail' task.id %}">{{ task.name }}</a>
+                <a href="{% url 'task_app:task_update' task.id %}"><button class="btn btn-primary">Modyfikuj</button></a>
+                <a href="{% url 'task_app:task_delete' task.id %}"><button class="btn btn-danger">Usuń</button></a>
+            </li>
         {% endfor %}
     </ul>
-</body>
-</html>
+{% endblock %}

@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "task_app/layout.html" %}
+
+{% block body %}
     <h2>Usuwanie zadania o numerze {{ task.id }}</h2>
     <form method="POST">
         {% csrf_token %}
-        <p>Czy na pewno chcesz usunąć zadanie {{ task.name }}</p>
-        <input type="submit" value="Potwierdź">
+        <p>Czy na pewno chcesz usunąć zadanie {{ task.name }}?</p>
+        <input type="submit" class="btn btn-danger" value="Potwierdź">
     </form>
-    <a href="{% url 'task_app:task_list' %}"><button>Anuluj</button></a>
-</body>
-</html>
+    <a href="{% url 'task_app:task_list' %}"><button class='btn btn-info'style="margin-top:5px;">Anuluj</button></a>
+{% endblock %}
