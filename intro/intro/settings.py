@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'form_app4.apps.FormApp4Config',
     'task_app.apps.TaskAppConfig',
     'relations.apps.RelationsConfig',
+    'form_app5.apps.FormApp5Config',
 ]
 
 MIDDLEWARE = [
