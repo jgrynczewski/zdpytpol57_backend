@@ -50,6 +50,8 @@ INSTALLED_APPS = [
     'task_app.apps.TaskAppConfig',
     'relations.apps.RelationsConfig',
     'form_app5.apps.FormApp5Config',
+    'view_app.apps.ViewAppConfig',
+    'cookies_app.apps.CookiesAppConfig',
 ]
 
 MIDDLEWARE = [

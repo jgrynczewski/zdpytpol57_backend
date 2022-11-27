@@ -41,4 +41,8 @@ urlpatterns = [
     path('task/', include('task_app.urls')),
     path('relations/', include('relations.urls')),
     path('form5/', include('form_app5.urls')),
+    path('view/', include('view_app.urls')),
+    path('cookie/', include('cookies_app.urls')),
+
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
